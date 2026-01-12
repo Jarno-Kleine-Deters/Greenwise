@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+/* ===== TOP HEADER ===== */
+.top-header {
+    background: #3fb0c9;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 20px;
+}
+
+.app-launcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dots {
+    display: grid;
+    grid-template-columns: repeat(3, 4px);
+    gap: 3px;
+}
+
+.dots span {
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.logo {
+    background: #c00000;
+    color: #fff;
+    padding: 6px 8px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.title {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ===== SEARCH ===== */
+.search {
+    flex: 1;
+    max-width: 520px;
+    background: #e9f6fa;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    color: #555;
+}
+
+.search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 8px;
+    font-size: 14px;
+}
+
+.search .icon {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ===== ACTION ICONS ===== */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: auto;
+}
+
+.actions .icon {
+    cursor: default;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    background: #ddd;
+    border-radius: 50%;
+}
+
+/* ===== SUB HEADER ===== */
+.sub-header {
+    background: #fff;
+    padding: 10px 16px;
+    display: flex;
+    gap: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sub-header a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.sub-header a.active {
+    color: #c00000;
+    font-weight: 600;
+}
+
+/* ===== LAUNCHER ===== */
+.launcher {
+    position: relative;
+}
+
+/* hide checkbox */
+#apps-toggle {
+    display: none;
+}
+
+/* ===== DOTS ===== */
+.dots {
+    display: grid;
+    grid-template-columns: repeat(3, 5px);
+    gap: 4px;
+    cursor: pointer;
+}
+
+.dots span {
+    width: 5px;
+    height: 5px;
+    background: #6b6b6b;
+    border-radius: 50%;
+}
+
+/* ===== PANEL ===== */
+.apps-panel {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 340px;
+    height: 100vh;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 1000;
+}
+
+/* show */
+#apps-toggle:checked~.apps-panel {
+    display: block;
+}
+
+/* ===== TEXT ===== */
+.apps-panel h2 {
+    color: #c00000;
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.apps-panel h3 {
+    color: #c00000;
+    font-size: 16px;
+    margin: 24px 0 12px;
+}
+
+/* ===== SEARCH ===== */
+.search-wrap {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-wrap input {
+    width: 100%;
+    padding: 10px 36px 10px 12px;
+    border: 2px solid #c00000;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+/* ===== GRID ===== */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* ===== APP TILE ===== */
+.app {
+    text-align: center;
+}
+
+.app-icon {
+    width: 72px;
+    height: 72px;
+    background: #3fb0c9;
+    border-radius: 6px;
+    margin: 0 auto 8px;
+}
+
+.app span {
+    font-size: 13px;
+}
+
+.apps-panel {
+    animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+/* ===== BLOCKS ===== */
+.block {
+    background: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+.block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.block-header h2 {
+    color: #c00000;
+    font-size: 18px;
+}
+
+/* ===== CARDS ===== */
+.card-row,
+.tile-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.news-card,
+.tile-card {
+    min-width: 220px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    height: 120px;
+}
+
+.placeholder {
+    background: linear-gradient(135deg, #ddd, #eee);
+}
+
+/* ===== BADGE ===== */
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #c00000;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+/* ===== BODY ===== */
+.card-body,
+.tile-body {
+    padding: 10px;
+}
+
+.card-body h3,
+.tile-body h3 {
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.meta {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ===== BUTTON ===== */
+.more-btn {
+    margin-top: 14px;
+    background: #c00000;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: default;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar-block {
+    background: #fff;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.sidebar-block h3 {
+    color: #c00000;
+    margin-bottom: 12px;
+}
+
+.notification {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.notification:last-child {
+    border-bottom: none;
+}
