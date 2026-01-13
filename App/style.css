@@ -215,6 +215,10 @@ body {
     margin: 0 auto 8px;
 }
 
+#app-text {
+    color: #333;
+}
+
 .app span {
     font-size: 13px;
 }
