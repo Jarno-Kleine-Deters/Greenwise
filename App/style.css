@@ -160,8 +160,8 @@ body {
     justify-content: center;
     background: #c0002b;
     color: #fff;
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     border-radius: 8px;
     line-height: 1.1;
     font-weight: 700;
@@ -173,7 +173,7 @@ body {
 }
 
 .info-page .logo-sub {
-    font-size: 11px;
+    font-size: 8px;
     margin-top: 6px;
 }
 
@@ -891,10 +891,23 @@ body {
     z-index: 2;
 }
 
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 1px;
+    margin: 20px 0;
+    gap: 10px;
+    margin-left: 400px;
+}
+
+
 .info-page .hero-text-box {
     max-width: 680px;
     padding: 50px 64px;
-    margin-right: 20px;
+    margin: 0 auto;
     z-index: 3;
     background: #fff;
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
